@@ -1,6 +1,4 @@
-# Torch
-
-Author: Vol Ki
+# Torch for SuperCollider
 
 Forward samples through PyTorch models
 
@@ -36,3 +34,11 @@ Use the command in `regenerate` to update CMakeLists.txt when you add or remove 
 project. You don't need to run it if you only change the contents of existing files. You may need to
 edit the command if you add, remove, or rename plugins, to match the new plugin paths. Run the
 script with `--help` to see all available options.
+
+## References
+
+- Prototype plugin by @xavriley: https://github.com/xavriley/qlibugens
+- [SuperCollider plugin tutorial](https://scsynth.org/t/tutorial-supercollider-server-plugins-in-c/3449)
+- [Sonic Pi Synth Design](https://github.com/sonic-pi-net/sonic-pi/blob/dev/SYNTH_DESIGN.md)
+- [RAVE waveform model](https://github.com/caillonantoine/RAVE)
+- [NASH hackathon by @benhayesmusic](https://twitter.com/benhayesmusic/status/1469344561352880130)
