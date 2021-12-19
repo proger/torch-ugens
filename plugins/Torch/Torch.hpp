@@ -1,6 +1,10 @@
 #pragma once
 
+#include <memory>
+#include <torch/script.h>
+
 #include "SC_PlugIn.hpp"
+
 
 namespace TorchUGens {
 
@@ -10,7 +14,13 @@ public:
     ~Torch();
 
 private:
+    int loadScript(const char *filename);
     void next(int nSamples);
+
+    torch::jit::Module module;
+    int i;
+    int bufferSamples;
+    at::Tensor buffer;
 };
 
 } // namespace TorchUGens

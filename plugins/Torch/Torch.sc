@@ -1,7 +1,7 @@
 Torch : UGen {
-	*ar { |input|
+	*ar { |input, temperature|
 		/* TODO */
-		^this.multiNew('audio', input);
+		^this.multiNew('audio', input, temperature);
 	}
 	checkInputs {
 		/* TODO */
