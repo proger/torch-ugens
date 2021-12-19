@@ -1,0 +1,26 @@
+class:: Torch
+summary:: Forward samples through PyTorch models
+related:: TODO
+categories:: UGens>TODO
+
+description::
+
+Forward samples through PyTorch models
+
+
+classmethods::
+
+method::ar, kr
+
+argument::TODO
+
+argument::TODO
+
+
+examples::
+
+code::
+
+{ Torch.ar(/* TODO */) }.play
+
+::
