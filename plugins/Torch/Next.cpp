@@ -24,8 +24,7 @@ void Torch::next(int nSamples) {
     const float* input = in(0);
     float* outbuf = out(0);
 
-    if (this->buffer.size(-1) == 0
-        || (this->i*nSamples % this->bufferSamples) == 0) {
+    if (this->buffer.size(-1) == 0 || (this->i*nSamples % this->bufferSamples) == 0) {
         // TODO: do this in a separate thread because I can hear the jitters
         Module &module = this->module;
 
@@ -42,6 +41,7 @@ void Torch::next(int nSamples) {
     for (int i = 0; i < nSamples; i++) {
         outbuf[i] = this->buffer[(this->i*nSamples + i)%this->bufferSamples].item<float>() * input[i];
     }
+    this->i++;
 }
 
 } // namespace TorchUGens
